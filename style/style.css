@@ -1,0 +1,374 @@
+/*----------------------- Import google fonts -------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+/*------------------------ Reset browser dafault settings ------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*-------------------- Set root variables ------------------*/
+:root {
+    --background-color: #C5E4E7;
+    --green-deep: #00474B;
+    --green-light: #26C2AE;
+    --background-light: #F3F9FA;
+
+    --label-color: #5E7A7D;
+    --subLebel-color: #7F9D9F;
+    --custum-color: #547878;
+    --white: #fff;
+    --red-color: #E17457;
+
+    --reset-hover: #9FE8DF;
+}
+
+/*-------------------- Body background, fonts and button font family ------------------*/
+body {
+    font-family: 'Space Mono', monospace;
+    background: var(--background-color);
+}
+button {
+    font-family: 'Space Mono', monospace;
+}
+
+/*-------------------- Header container with logo image  ------------------*/
+.header__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header__container img {
+    margin: 50px 0 41px 0;
+}
+
+/*-------------------- Tip calculator background ------------------*/
+.main__container {
+    box-shadow: 0px 32px 43px rgba(79, 166, 175, 0.200735);
+    border-radius: 25px 25px 0px 0px;
+    background: var(--white);
+    padding: 32px;
+}
+.select__tip {
+    margin-bottom: 32px;
+}
+
+/*-------------------- Tip calculator labels ------------------*/
+.bill label,
+.select__tip label,
+.number__of__people label {
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--label-color);
+}
+.select__tip label {
+    margin-top: 32px;
+    margin-bottom: 16px;
+}
+
+/*-------------------- Tip calculator inputs ------------------*/
+.input__active {
+    border: 2px solid var(--green-light);
+}
+.bill input,
+.number__of__people input{
+    width: 311px;
+    font-family: 'Space Mono';
+    font-size: 24px;
+    line-height: 36px;
+    height: 48px;
+    text-align: right;
+    padding-right: 17px;
+    border: none;
+    color: var(--green-deep);
+    background: var(--background-light);
+    border-radius: 5px;
+    margin-top: 6px;
+    outline: none;
+}
+
+/*-------------------- Dollar and person icon in it's boxes ------------------*/
+.bill__box {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.bill__box span,
+.number__of__people__box span  {
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.number__of__people__box {
+    position: relative;
+}
+
+.bill__box span img,
+.number__of__people__box span img
+ {
+    margin: 20px 0 16px 19px;
+}
+
+/*-------------------- Tip calculator buttons and one input ------------------*/
+.select__tip {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.select__tip button {
+    width: 147px;
+    height: 48px;
+    background: var(--green-deep);
+    border-radius: 5px;
+    margin-bottom: 16px;
+    border: none;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    color: var(--white);
+}
+.select__tip button:nth-child(5),
+.select__tip button:nth-child(6) {
+    margin-bottom: 0;
+}
+.select__tip__box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+}
+.custom__box {
+    width: 147px;
+}
+.custom {
+    color: var(--custum-color);
+    width: 100%;
+    height: 100%;
+    background: var(--background-light);
+    border: none;
+    text-align: right;
+    padding-right: 17px;
+    font-family: 'Space Mono';
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    border-radius: 5px;
+}
+.custom::placeholder {
+    font-family: 'Space Mono';
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    color: var(--custum-color);
+}
+
+/*-------------------- Tip box background ------------------*/
+.tip__box {
+    background: var(--green-deep);
+    border-radius: 15px;
+    padding: 39px 24px 24px 24px;
+    margin-top: 32px;
+}
+.tip__amount,
+.total__amount {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.tip__amount {
+    margin-bottom: 25px;
+}
+
+/*-------------------- Tip output labels ------------------*/
+.tip__amount_text label,
+.total_amount_text label {
+    color: var(--white);
+}
+
+/*-------------------- Tip output texts ------------------*/
+.tip__amount_text p,
+.total_amount_text p {
+    font-size: 13px;
+    line-height: 19px;
+    color: var(--subLebel-color);
+}
+.tip__amount__result p,
+.total__amount__result p {
+    font-size: 32px;
+    line-height: 47px;
+    letter-spacing: -0.666667px;
+    color: var(--green-light);
+}
+
+/*-------------------- Reset button ------------------*/
+.reset {
+    border: none;
+    background: var(--green-light);
+    width: 100%;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    padding: 9px 32px;
+    margin-top: 35px;
+    color: var(--green-deep);
+    border-radius: 5px;
+    transition: background 0.2s ease;
+}
+
+/*-------------------- Desktop version ------------------*/
+@media (min-width: 1440px) {
+    /*-------------------- Regroup content into the center ------------------*/
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    /*-------------------- Remove logo margin top ------------------*/
+    .header__container img {
+        margin: 0 0 41px 0;
+    }
+
+    /*-------------------- Change orientation tip calculator ------------------*/
+    .main__container {
+        width: 920px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 25px;
+    }
+
+    /*-------------------- Set tip container width ------------------*/
+    .tip__container {
+        width: 379px;
+    }
+
+    /*-------------------- Set dollar icon flex start ------------------*/
+    .select__tip__box {
+        justify-content: flex-start;
+        width: 379px; 
+    }
+
+    /*-------------------- Change buttons properties ------------------*/
+    .select__tip button {
+        width: 117px;
+        margin: 0 14px 16px 0;
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+    .select__tip button:hover {
+        color: var(--green-deep);
+        background: var(--green-light);
+    }
+    .select__tip button:nth-child(3),
+    .select__tip button:nth-child(5),
+    .custom__box {
+        margin: 0;
+    }
+
+    .select__tip .active__tip {
+        color: var(--green-deep);
+        background: var(--green-light);
+    }
+
+    /*-------------------- Set green border in focus ------------------*/
+    .bill__box input:focus,
+    .number__of__people input:focus {
+        border: 2px solid var(--green-light);
+    }
+    .custom {
+        outline: none;
+        width: 118px;
+        padding: 6px 15px 6px 14px;
+    }
+    .custom:focus {
+        border: 2px solid var(--green-light); 
+        padding: 6px 13px 6px 0;
+    }
+
+    /*-------------------- Remove up and down arrows ------------------*/
+    .custom::-webkit-outer-spin-button,
+    .custom::-webkit-inner-spin-button,
+    .bill input::-webkit-outer-spin-button,
+    .bill input::-webkit-inner-spin-button,
+    .number__of__people input::-webkit-inner-spin-button,
+    .number__of__people input::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+    .custom[type=number],
+    .bill input[type=number],
+    .number__of__people input[type=number] {
+        -moz-appearance:textfield;
+    }
+
+    /*-------------------- Change custom box input properties ------------------*/
+    .custom__box {
+        width: 118px;
+        height: 48px;
+        margin-left: 13px;
+    }
+
+    /*-------------------- Increase input width 100% ------------------*/
+    .bill input,
+    .number__of__people input {
+        width: 100%;
+    }
+    
+    .tip__box {
+        padding: 56px 40px 40px 40px;
+        margin-top: 0;
+        width: 413px;
+        height: 417px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+   /*-------------------- Error text ------------------*/
+   .label__wrapper {
+    display: flex;
+    justify-content: space-between;
+   }
+    .error__msg {
+        opacity: 0;
+    }
+    .show-error-msg {
+        transition: opacity 1s ease-in-out;
+        opacity: 1;
+        color: var(--red-color);
+    }
+    
+    #show__inp__people {
+        border: 2px solid var(--red-color);
+    }
+
+    /*-------------------- Remove reset button margins ------------------*/
+    .reset {
+        margin: 0; 
+    }
+
+    /*-------------------- Change font size and line height in p tags ------------------*/
+    .tip__amount__result p,
+    .total__amount__result p {
+        font-size: 48px;
+        line-height: 71px;
+    }
+
+    /*-------------------- Change logo margins ------------------*/
+    .bill__box span img,
+    .number__of__people__box span img
+    {
+        margin: 20px 0 16px 17px;
+    }
+
+    /*-------------------- Set reset hover effect ------------------*/
+    .reset:hover {
+        cursor: pointer;
+        background: var(--reset-hover);
+    }
+}
