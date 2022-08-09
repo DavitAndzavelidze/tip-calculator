@@ -1,72 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="style/style.css">
-  <title>Frontend Mentor | Tip calculator app</title>
-</head>
-<body>
-  <header class="header__container">
-    <img src="./images/logo.svg" alt="logo">
-  </header>
-  <main class="main__container">
-    <div class="tip__container">
-      <div class="bill">
-        <label for="#">Bill</label>
-        <div class="bill__box">
-          <span><img src="./images/icon-dollar.svg" alt="icon-dollar"></span><input id="bill__input" type="number">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style/style.css" />
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body>
+    <header class="header__container">
+      <img src="./images/logo.svg" alt="logo" />
+    </header>
+    <main class="main__container">
+      <div class="tip__container">
+        <div class="bill">
+          <label for="#">Bill</label>
+          <div class="bill__box">
+            <span><img src="./images/icon-dollar.svg" alt="icon-dollar" /></span
+            ><input id="bill__input" type="number" />
+          </div>
         </div>
-      </div>
-      <div class="select__tip">
-        <label for="#">Select Tip %</label>
-        <div class="select__tip__box">
-          <button class="btn tip">5%</button>
-          <button class="btn tip">10%</button>
-          <button class="btn tip active__tip">15%</button>
-          <button class="btn tip">25%</button>
-          <button class="btn tip">50%</button>
-          <div class="custom__box">
-            <input class="custom" id="inp__tip" type="number" placeholder="Custom">
+        <div class="select__tip">
+          <label for="#">Select Tip %</label>
+          <div class="select__tip__box">
+            <button class="btn tip">5%</button>
+            <button class="btn tip">10%</button>
+            <button class="btn tip">15%</button>
+            <button class="btn tip">25%</button>
+            <button class="btn tip">50%</button>
+            <div class="custom__box">
+              <input
+                class="custom"
+                id="inp__tip"
+                type="number"
+                placeholder="Custom"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="number__of__people">
+          <div class="label__wrapper">
+            <label for="#">Number of People</label>
+            <p for="#" class="error__msg">Can't be zero</p>
+          </div>
+          <div class="number__of__people__box">
+            <span><img src="./images/icon-person.svg" alt="icon-person" /></span
+            ><input id="inp__people" class="people__input" type="number" />
           </div>
         </div>
       </div>
-      <div class="number__of__people">
-        <div class="label__wrapper">
-          <label for="#">Number of People</label>
-          <p for="#" class="error__msg">Can't be zero</p>
+      <div class="tip__box">
+        <div class="tip__box__wrapper">
+          <div class="tip__amount">
+            <div class="tip__amount_text">
+              <label for="#">Tip Amount</label>
+              <p>/ person</p>
+            </div>
+            <div class="tip__amount__result">
+              <p class="value">$0.00</p>
+            </div>
+          </div>
+          <div class="total__amount">
+            <div class="total_amount_text">
+              <label for="#">Total</label>
+              <p>/ person</p>
+            </div>
+            <div class="total__amount__result">
+              <p class="value">$0.00</p>
+            </div>
+          </div>
         </div>
-        <div class="number__of__people__box">
-          <span><img src="./images/icon-person.svg" alt="icon-person"></span><input id="inp__people" class="people__input" type="number">
-        </div>
+        <button class="reset">RESET</button>
       </div>
-    </div>
-    <div class="tip__box">
-      <div class="tip__box__wrapper">
-        <div class="tip__amount">                           
-          <div class="tip__amount_text">
-            <label for="#">Tip Amount</label>
-            <p>/ person</p>
-          </div>
-          <div class="tip__amount__result">
-          <p class="value">$0.00</p>
-          </div>
-        </div>
-        <div class="total__amount">
-          <div class="total_amount_text">
-            <label for="#">Total</label>
-            <p>/ person</p>
-          </div>
-          <div class="total__amount__result">
-            <p class="value">$0.00</p>
-          </div>
-        </div>
-      </div>
-      <button class="reset">RESET</button>
-    </div>
-  </main>
-  <script src="./script/script.js"></script>
-</body>
+    </main>
+    <script src="./script/script.js"></script>
+  </body>
 </html>
